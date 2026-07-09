@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DulceMom — Endulzando tus momentos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo" onclick="scrollTo('inicio')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 11H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2Z"/>
+            <path d="M12 11V7"/><path d="M8 11V9"/><path d="M16 11V9"/>
+            <path d="M4 17v2"/><path d="M20 17v2"/>
+            <path d="M9 7a3 3 0 0 1 6 0"/>
+          </svg>
+          DulceMom
+        </div>
+
+        <nav class="nav-desktop">
+            <a href="#inicio">Inicio</a>
+            <a href="#pasteles">Pasteles</a>
+            <a href="#postres">Postres</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+          <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="display:none">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+      <nav class="nav-mobile" id="nav-mobile">
+          <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+          <a href="#pasteles" onclick="toggleMenu()">Pasteles</a>
+          <a href="#postres" onclick="toggleMenu()">Postres</a>
+          <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
+          <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+      </nav>
+  </header> 
+
+  <!-- HERO -->
+  <section id="inicio">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="Pasteles artesanales" />
+    </div>
+    <div class="container">
+      <div class="hero-card">
+        <p class="hero-label">El Arte del Sabor</p>
+        <h1 class="hero-title">Endulzando tus momentos</h1>
+        <p class="hero-sub">Pastelería boutique donde cada pieza es creada a mano con amor, dedicación y los más finos ingredientes.</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" onclick="scrollTo('pasteles')">Ver Creaciones</button>
+          <button class="btn btn-outline" onclick="scrollTo('nosotros')">Nuestra Historia</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASTELES -->
+  <section id="pasteles">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Nuestros Pasteles</h2>
+        <hr class="section-divider" />
+        <p class="section-sub">Celebraciones que merecen ser recordadas. Capas de sabor diseñadas para deleitar tus sentidos.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-img"><img src="images/Zanahoria.jpeg" alt="Pastel de Zanahoria" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Pastel de zanahoria</h3>
+              <span class="card-price">$750</span>
+            </div>
+            <p class="card-desc">Pastel de zanahoria relleno de betún de queso crema de 12 a 15 porciones.</p>
+          </div>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-img"><img src="images/vegano.jpeg" alt="Pastel Vegano" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Pastel vegano chocolate/maracuya</h3>
+              <span class="card-price">$650</span>
+            </div>
+            <p class="card-desc">Pastel vegano chocolate/maracuya de 12 a 15 porciones.</p>
+          </div>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-img"><img src="images/Tres-leches.jpeg" alt="Pastel 3 leches" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Pastel tres leches sabor vainilla</h3>
+              <span class="card-price">$850</span>
+            </div>
+            <p class="card-desc">Pastel tres leches sabor vainilla de 12 a 15 porciones.</p>
+          </div>
+        </div>
+        <div class="card reveal reveal-delay-4">
+          <div class="card-img"><img src="images/pay-platano.jpeg" alt="Pastel pay de platano" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Pay de platano y crema pastelera</h3>
+              <span class="card-price">$580</span>
+            </div>
+            <p class="card-desc">Pay de platano y crema pastelera 12 a 15 porciones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTRES -->
+  <section id="postres" class="bg-muted">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Postres Individuales</h2>
+        <hr class="section-divider gold" />
+        <p class="section-sub">Pequeños momentos de alegría, elaborados diariamente con técnica clásica y cariño de casa.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-img"><img src="images/dessert-eclair.png" alt="Éclair de Vainilla" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Éclair de Vainilla</h3>
+              <span class="card-price">$85</span>
+            </div>
+            <p class="card-desc">Masa choux rellena de crema pastelera de vainilla de Madagascar, glaseado brillante.</p>
+          </div>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-img"><img src="images/dessert-macaron.png" alt="Macaron Parisino" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Macaron Parisino</h3>
+              <span class="card-price">$65 c/u</span>
+            </div>
+            <p class="card-desc">Delicadas galletas de almendra con ganache de frambuesa, pistache o chocolate.</p>
+          </div>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-img"><img src="images/dessert-cremebrulee.png" alt="Crème Brûlée" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Crème Brûlée</h3>
+              <span class="card-price">$120</span>
+            </div>
+            <p class="card-desc">Crema de vainilla horneada con caramelizado crujiente al momento.</p>
+          </div>
+        </div>
+        <div class="card reveal reveal-delay-4">
+          <div class="card-img"><img src="images/dessert-mango.png" alt="Tarta de Mango" /></div>
+          <div class="card-body">
+            <div class="card-head">
+              <h3 class="card-name">Tarta de Mango</h3>
+              <span class="card-price">$145</span>
+            </div>
+            <p class="card-desc">Base de almendra, crema de coco y mango fresco, toque de menta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img reveal">
+          <img src="images/about.png" alt="Nuestra fundadora" />
+        </div>
+        <div class="about-text reveal">
+          <p class="about-label">Nuestra Filosofía</p>
+          <h2 class="about-title">Hecho a mano, horneado con el corazón</h2>
+          <p>DulceMom nació del sueño de traer la magia de las clásicas pastelerías parisinas a nuestro propio barrio.</p>
+          <p>Creemos que un buen postre no solo satisface el paladar, sino que abraza el alma. Por eso, madrugamos cada día para amasar, batir y hornear utilizando únicamente ingredientes nobles: mantequilla de verdad, vainilla pura de Madagascar y frutas frescas de productores locales.</p>
+          <p>No usamos atajos ni conservadores. Cada pieza que sale de nuestro horno es única, elaborada con paciencia y devoción absoluta por el arte de la repostería.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-muted border-top">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Contáctanos</h2>
+        <hr class="section-divider" />
+        <p class="section-sub">Haz tu pedido con anticipación. Estamos disponibles por WhatsApp o llamada.</p>
+      </div>
+
+      <div class="contact-btns reveal">
+        <a href="https://wa.me/523212109103" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Escribir por WhatsApp
+        </a>
+        <a href="tel:+523212109103" class="btn-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          321 210 9103
+        </a>
+      </div>
+
+      <div class="contact-hours reveal">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        Lunes a Sábado: 8:00 - 20:00 &nbsp;|&nbsp; Domingo: 9:00 - 18:00
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 11H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2Z"/>
+              <path d="M12 11V7"/><path d="M8 11V9"/><path d="M16 11V9"/>
+              <path d="M4 17v2"/><path d="M20 17v2"/>
+              <path d="M9 7a3 3 0 0 1 6 0"/>
+            </svg>
+            DulceMom
+          </div>
+          <p class="footer-tagline">Repostería artesanal elaborada a mano con pasión y los mejores ingredientes.</p>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-phone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            321 210 9103
+          </div>
+          <p class="footer-copy" id="footer-year"></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
